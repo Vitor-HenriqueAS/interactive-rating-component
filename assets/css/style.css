@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --color-text: hsl(217, 12%, 63%);
+    --hover-li: hsl(216, 12%, 54%);
+    --bg-body: hsl(228, 11%, 9%);
+    --bg-card: hsl(215, 22%, 15%);
+    --bg-li-img-p: hsl(210, 19%, 18%);
+    --bg-btn: hsl(25, 97%, 53%);
+    --color-rating: hsl(25, 65%, 55%);
+}
+
+body {
+    background-color: var(--bg-body);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Overpass', sans-serif;
+}
+
+.card {
+    background-color: var(--bg-card);
+    max-width: 400px;
+    padding: 30px;
+    display: none;
+    border-radius: 25px;
+}
+
+.card.thank-you {
+    text-align: center;
+}
+
+.visible {
+    display: block;
+}
+
+.card .star-icon {
+    background-color: var(--bg-li-img-p);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.card .rating {
+    color: var(--color-rating);
+    background-color: var(--bg-li-img-p);
+    padding: 10px;
+    margin: 20px auto;
+    width: max-content;
+    border-radius: 15px;
+}
+
+.card .title {
+    color: var(--white);
+    margin: 30px 0 10px 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.card .text {
+    color: var(--color-text);
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 400;
+}
+
+.card ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card ul li {
+    background-color: var(--bg-li-img-p);
+    color: var(--color-text);
+    padding: 14px 20px;
+    border-radius: 50%;
+    margin: 30px 0;
+    transition: .3s ease-in-out;
+}
+
+.card ul li:hover {
+    background-color: var(--hover-li);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.is-selected {
+    background-color: var(--bg-btn);
+    color: var(--white);
+}
+
+.card button {
+    background-color: var(--bg-btn);
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    border: none;
+    text-transform: uppercase;
+    width: 100%;
+    border-radius: 20px;
+    padding: 15px;
+    transition: .3s ease-in-out;
+}
+
+.card button:hover {
+    background-color: var(--white);
+    color: var(--bg-btn);
+    cursor: pointer;
+}
+
+.attribution { font-size: 12px; color: var(--white); margin-top: 20px;}
+.attribution a { color: var(--bg-btn); }
+.attribution a:hover { color: var(--color-rating); text-decoration: underline;}
