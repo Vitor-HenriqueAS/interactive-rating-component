@@ -1,18 +1,19 @@
-function myRating(num) {
-    document.getElementById('note').innerHTML = num;
-    document.getElementById('btnSubmit').disabled = false;
-    let scoreBtns = document.querySelectorAll('.btn')
+const ratingBtn = document.querySelectorAll('.rating-btn li a');
+const activeRatingBtn = document.getElementsByClassName('is-selected');
 
-    scoreBtns.forEach((btn) => {
-        btn.classList.remove("is-selected");
+ratingBtn.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        ratingBtn.forEach(item => {
+            item.classList.remove('is-selected');
+        } )
+        btn.classList.add('is-selected');
 
-        if (btn.getAttribute("value") === num) {
-            btn.classList.add("is-selected");
-            return;
-        }
-    });
-    
-}
+        const result = activeRatingBtn[0].innerHTML;
+        document.getElementById('note').innerHTML = result;
+        document.getElementById('btnSubmit').disabled = false;
+    })
+})
 
 function changeScreen() {
     let card1 = document.querySelectorAll('.card')[0];

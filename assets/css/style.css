@@ -74,27 +74,34 @@ body {
     font-weight: 400;
 }
 
-.card ul {
-    display: flex;
+.card .rating-btn {
+    width: 100%;
+    display: inline-flex;
     justify-content: space-between;
 }
 
-.card ul li {
-    background-color: var(--bg-li-img-p);
-    color: var(--color-text);
-    padding: 14px 20px;
-    border-radius: 50%;
+.card .rating-btn li {
     margin: 30px 0;
-    transition: .3s ease-in-out;
 }
 
-.card ul li:hover {
+.card .rating-btn li a{
+    background-color: var(--bg-li-img-p);
+    color: var(--color-text);
+    display: inline-block;
+    text-align: center;
+    line-height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 2.5rem;
+    transition: all 0.5s;
+  }
+
+.card .rating-btn li a:hover {
     background-color: var(--hover-li);
     color: var(--white);
     cursor: pointer;
 }
 
-.is-selected {
+.card .rating-btn li a.is-selected {
     background-color: var(--bg-btn);
     color: var(--white);
 }
