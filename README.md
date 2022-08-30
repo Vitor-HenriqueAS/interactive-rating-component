@@ -4,11 +4,13 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [Author](#author)
+- [Frontend Mentor - Interactive rating component solution](#frontend-mentor---interactive-rating-component-solution)
+	- [Table of contents](#table-of-contents)
+	- [Overview](#overview)
+		- [The challenge](#the-challenge)
+		- [Screenshot](#screenshot)
+		- [Links](#links)
+	- [Author](#author)
 
 ## Overview
 
@@ -27,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Vitor-HenriqueAS/interactive-rating-component)
-- Live Site URL: [Add live site URL here](https://vitor-henriqueas.github.io/interactive-rating-component/)
+- Solution URL: https://github.com/Vitor-HenriqueAS/interactive-rating-component
+- Live Site URL: https://vitor-henriqueas.github.io/interactive-rating-component/
 
 ## Author
 
