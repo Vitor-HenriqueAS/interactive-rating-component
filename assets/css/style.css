@@ -10,17 +10,17 @@
 
 :root {
     --white: hsl(0, 0%, 100%);
-    --color-text: hsl(217, 12%, 63%);
-    --hover-li: hsl(216, 12%, 54%);
-    --bg-body: hsl(228, 11%, 9%);
-    --bg-card: hsl(215, 22%, 15%);
-    --bg-li-img-p: hsl(210, 19%, 18%);
-    --bg-btn: hsl(25, 97%, 53%);
-    --color-rating: hsl(25, 65%, 55%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --very-dark-blue: hsl(228, 11%, 9%);
+    --dark-blue: hsl(215, 22%, 15%);
+    --medium-dark-blue: hsl(210, 19%, 18%);
+    --orange: hsl(25, 97%, 53%);
+    --light-orange: hsl(25, 65%, 55%);
 }
 
 body {
-    background-color: var(--bg-body);
+    background-color: var(--very-dark-blue);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,7 +30,7 @@ body {
 }
 
 .card {
-    background-color: var(--bg-card);
+    background-color: var(--dark-blue);
     max-width: 400px;
     padding: 30px;
     display: none;
@@ -45,15 +45,44 @@ body {
     display: block;
 }
 
-.card .star-icon {
-    background-color: var(--bg-li-img-p);
-    padding: 10px;
+.card .star {
+    background-color: var(--medium-dark-blue);
+		max-width: fit-content;
+		padding: 10px;
     border-radius: 50%;
+
+		transition: 0.5s ease-in-out;
+		border: 1px solid transparent;
+}
+
+.card .star:hover {
+	border: 1px solid var(--white);
+}
+
+.star .star-icon {
+	width: 16px;
+	height: 16px;
+	background-color: var(--orange);
+
+	mask: url("../images/icon-star.svg") 100% no-repeat;
+	-webkit-mask: url("../images/icon-star.svg") 100% no-repeat;
+}
+
+.star:hover .star-icon {
+	animation: star 5s infinite;
+}
+
+@keyframes star {
+	0%   { background-color: hsl(25, 97%, 53%);transform: rotateZ(1deg);}
+	25%  { background-color: hsl(25, 89%, 44%);}
+	50%  { background-color: hsl(25, 52%, 65%);}
+	75%  { background-color: hsl(25, 71%, 36%);}
+	100% { background-color: hsl(25, 97%, 53%);transform: rotateZ(360deg);}
 }
 
 .card .rating {
-    color: var(--color-rating);
-    background-color: var(--bg-li-img-p);
+    color: var(--light-orange);
+    background-color: var(--medium-dark-blue);
     padding: 10px;
     margin: 20px auto;
     width: max-content;
@@ -68,7 +97,7 @@ body {
 }
 
 .card .text {
-    color: var(--color-text);
+    color: var(--light-grey);
     font-size: 15px;
     line-height: 25px;
     font-weight: 400;
@@ -85,8 +114,8 @@ body {
 }
 
 .card .rating-btn li a{
-    background-color: var(--bg-li-img-p);
-    color: var(--color-text);
+    background-color: var(--medium-dark-blue);
+    color: var(--light-grey);
     display: inline-block;
     text-align: center;
     line-height: 3.5rem;
@@ -96,18 +125,18 @@ body {
   }
 
 .card .rating-btn li a:hover {
-    background-color: var(--hover-li);
+    background-color: var(--medium-grey);
     color: var(--white);
     cursor: pointer;
 }
 
 .card .rating-btn li a.is-selected {
-    background-color: var(--bg-btn);
+    background-color: var(--orange);
     color: var(--white);
 }
 
 .card button {
-    background-color: var(--bg-btn);
+    background-color: var(--orange);
     color: var(--white);
     font-size: 15px;
     font-weight: 700;
@@ -122,10 +151,10 @@ body {
 
 .card button:hover {
     background-color: var(--white);
-    color: var(--bg-btn);
+    color: var(--orange);
     cursor: pointer;
 }
 
 .attribution { font-size: 12px; color: var(--white); margin-top: 20px;}
-.attribution a { color: var(--bg-btn); }
-.attribution a:hover { color: var(--color-rating); text-decoration: underline;}
+.attribution a { color: var(--orange); }
+.attribution a:hover { color: var(--light-orange); text-decoration: underline;}
