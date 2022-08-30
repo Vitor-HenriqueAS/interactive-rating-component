@@ -104,9 +104,12 @@ body {
 }
 
 .card .rating-btn {
-    width: 100%;
-    display: inline-flex;
-    justify-content: space-between;
+		max-width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		justify-content: center;
+		align-items: center;
 }
 
 .card .rating-btn li {
